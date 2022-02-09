@@ -38,7 +38,7 @@ internal class MoveZeroesTest {
 
     @Test
     internal fun `moveZeroes shifts return all zeroes when input is all zeros`() {
-        val input = intArrayOf(0,0,0,4)
+        val input = intArrayOf(0,0,0,0)
         val expectedResult = intArrayOf(0,0,0,0)
 
         moveZeroes(input)
