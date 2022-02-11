@@ -13,16 +13,13 @@ import commons.ListNode
 
 class MiddleOfTheLinkedList {
     operator fun invoke(head: ListNode?): ListNode?{
-        if(head == null) return null
-        if(head.next == null) return head
-
         var slowPointer = head
-        var fastPointer = head?.next?.next
+        var fastPointer = head
 
-        while (fastPointer?.next != null){
-            fastPointer = fastPointer.next?.next
+        while (fastPointer != null && fastPointer.next != null){
             slowPointer = slowPointer?.next
+            fastPointer = fastPointer.next?.next
         }
-        return slowPointer?.next
+        return slowPointer
     }
 }
